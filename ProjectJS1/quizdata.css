@@ -1,0 +1,15 @@
+.quiz_container{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.optionElement{
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.activeFunc{
+   background-color: rgb(35,125,250);
+   cursor: pointer;
+   color: white;
+
+}
