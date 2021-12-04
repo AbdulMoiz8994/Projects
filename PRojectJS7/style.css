@@ -60,3 +60,15 @@ body{
     color: white;
     padding: 20px;
 }
+.dealine-format h4{
+    font-size: 25px;
+}
+@media (max-width:768px) {
+    body{
+        overflow: visible;
+    }
+    .mainContainer{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }   
+}
