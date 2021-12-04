@@ -41,8 +41,24 @@ body{
     border-radius: 10px;
     box-shadow: 2px 2px 10px gray;
     padding: 10px 20px;
+    position: relative;
 }
+.image::after{
+    font-family: "Font Awesome 5 Free";
+    background-color: rgb(73,166,233);
+    font-weight: 900;
+    content: "\f10e";
+    position: relative;
+    top: -160px;
+    left: -10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
 
+}
 .image img{
     width: 150px;
     height:150px;
