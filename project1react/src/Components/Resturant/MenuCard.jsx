@@ -3,7 +3,7 @@ import React from 'react'
 export const MenuCard = ({data}) => {
     return (
         <div>
-        {data && data.map((item) =>{
+        {data.map((item) =>{
             const {id,name ,category,description,image,price}=item
            return(
         <div className="card-cobtainer" key={id}>

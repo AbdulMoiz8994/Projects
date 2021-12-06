@@ -7,6 +7,7 @@ function getData(num){
 }
 function submitvalue(){
     screen.value =eval(screen.value)
+
 }
 function clearData(){
     screen.value=""
