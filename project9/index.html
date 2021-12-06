@@ -13,46 +13,46 @@
 </head>
 <body>
       <div class="main_container">
-        <table class="table  table-borderless table-responsive-sm  main_table">
+        <table class="table   table-borderless table-responsive-sm  main_table" >
           <tbody>
               <tr>
                   <td colspan="4">
-                      <input type="text" class="form-control bg-light" name="" id="screen">
+                      <input type="text" class="form-control bg-light"  name="" data-input id="screen" onclick="inputValue()">
                   </td>
               </tr>
               <tr>
                   <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="clearData()">C</button></td>
-                  <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('/')">/</button></td>
-                  <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('*')">X</button></td>
-                  <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('-')">-</button></td>
+                  <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('/')">/</button></td>
+                  <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('*')">X</button></td>
+                  <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('-')">-</button></td>
               </tr>
               <tr>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('7')">7</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('8')">8</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control"onclick="getNumber('9')">9</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('7')">7</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('8')">8</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control"onclick="getData('9')">9</button></td>
                 <td rowspan="2">
-                <button class="btn btn-lg btn-outline-secondary form-control btntype2" onclick="getNumber('+')">
+                <button class="btn btn-lg btn-outline-secondary form-control btntype2" onclick="getData('+')">
                     +
                 </button>
                 </td>
             </tr>
             <tr>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('4')">4</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('5')">5</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('6')">6</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('4')">4</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('5')">5</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('6')">6</button></td>
             </tr>
             <tr>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('1')">1</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('2')">2</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('3')">3</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('1')">1</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('2')">2</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('3')">3</button></td>
                 <td rowspan="2">
-                <button class="btn btn-lg btn-outline-secondary form-control btntype2" onclick="submit()">
+                <button class="btn btn-lg btn-outline-secondary form-control btntype2" onclick="submitvalue()">
                     =
                 </button></td>
             </tr>
             <tr>
-                <td colspan="2"><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('0')">0</button></td>
-                <td><button class="btn btn-lg btn-outline-secondary form-control" onclick="getNumber('.')">.</button></td>       
+                <td colspan="2"><button class="btn btn-lg btn-outline-secondary form-control" onclick="getData('0')">0</button></td>
+                <td><button class="btn btn-lg btn-outline-secondary form-control"onclick="getData('.')">.</button></td>       
                  </tr>
           </tbody>
         </table>
