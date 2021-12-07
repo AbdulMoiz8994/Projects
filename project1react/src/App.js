@@ -1,10 +1,11 @@
 import './App.css';
-import './Components/Resturant/menuApi'
-import Resturant from './Components/Resturant/Resturant'
+// import Resturant from './Components/Resturant/Resturant'
+import {Todo} from './Components/TODOAPP/todo'
 function App() {
   return (
     <div>
-      <Resturant/>
+      {/* <Resturant/> */}
+      <Todo/>
     </div>
   ); 
 }
