@@ -8,6 +8,7 @@ export const WeatherApi = () => {
 
 const [value, setValue]=useState("karachi");
 const [tempdata, setTemp]=useState({});
+const [weatherIcon, setWeatherIcon]=useState("");
 
 
 const getWeatherInfo= async ()=>{
@@ -20,9 +21,8 @@ const getWeatherInfo= async ()=>{
          console.log(data);
          const {temp, humidity,pressure}=data.main
          const {main:weathermood}=data.weather[0]
-        //  console.log(weathermood);
          const {deg,speed}=data.wind
-         const {country,sunset}=data.sys
+         const {country,sunset,sunrise}=data.sys
          const {name}=data
 
         //  make the new object pass this and useState hook when other country search it should show new country data
@@ -36,6 +36,7 @@ const getWeatherInfo= async ()=>{
             country,
             sunset,
             name,
+            sunrise
          }
          setTemp(myNewWeather)
          }
@@ -45,16 +46,54 @@ const getWeatherInfo= async ()=>{
          }
            
 }
-const {temp,humidity,pressure,weathermood,deg,speed,country,sunset,name}=tempdata
+const {temp,humidity,pressure,weathermood,deg,speed,country,sunset,name,sunrise}=tempdata
 // first we want convert second in time
-
 let sec=sunset;
 // console.log(sec);
-
 const date=new Date(sec * 1000);
 console.log(date);
 const finRes=`${date.getHours()}:${date.getMinutes()}`
 // console.log(finRes);
+// first convert second into time of today
+const getSecs=sunrise;
+console.log(sunrise);
+const getdate=new Date(getSecs * 1000)
+console.log(getdate.getHours(), getdate.getMinutes());
+let finalResult;
+if(getdate.getHours() < 10 && getdate.getMinutes() < 10){
+     finalResult= `0${getdate.getHours()}:0${getdate.getMinutes()}`
+}else{
+    finalResult=`${getdate.getHours()}:${getdate.getMinutes()}`
+}
+// console.log(finalResult);
+useEffect(() => {
+    if(weathermood){
+        switch (weathermood) {
+            case "Clear":
+                setWeatherIcon("bi-brightness-high-fill")
+            break;
+            case "Haze":
+                setWeatherIcon("bi-cloud-haze2")
+                break;
+              case "Mist":
+                  setWeatherIcon("bi-cloud-lightning-fill");
+                break; 
+                case "Rain":
+                  setWeatherIcon("bi-cloud-rain");
+                break;
+                case "Clouds":
+                    setWeatherIcon("bi-clouds-fill");
+                  break;
+            default:
+                setWeatherIcon("bi-brightness-high-fill")
+                break;
+        }
+    }else{
+        return
+    }
+   
+}, [weathermood])
+
 useEffect(() =>{
   getWeatherInfo();
 },[])
@@ -79,7 +118,10 @@ useEffect(() =>{
             <h1>{deg}</h1>
             <h1>{speed}</h1>
             <h1>{finRes} PM</h1>
-            
+            <h1>{finalResult} AM</h1>
+       <div className="image">
+       <i className={`${weatherIcon} image2`}></i>
+        </div>           
         </div>
     )
 }
