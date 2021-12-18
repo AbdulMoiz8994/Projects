@@ -3,3 +3,11 @@
     margin: 0 auto;
     margin-top: 20px;
 }
+.para{
+    cursor: pointer;
+    padding: 10px 0px;
+}
+.active{
+    background-color: rgb(35,125,250);
+    color: white;
+}
