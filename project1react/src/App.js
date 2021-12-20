@@ -4,8 +4,9 @@ import './App.css';
 // import {WeatherApi} from './Components/WeatherApiProj/WeatherApi'
 
 // slef practice
-import {Todo} from './Components/SlefPractice/index'
-
+// import {Todo} from './Components/SlefPractice/index';
+// import {Tour} from './Components/SlefPractice/PracticeApi/index'
+import {QuestionAns} from './Components/SlefPractice/QuestionAns/index'
 function App() {
   return (
     <div>
@@ -13,7 +14,10 @@ function App() {
       {/* <Todo/> */}
       {/* <WeatherApi/> */}
       {/* <h1>hello</h1> */}
-      <Todo/>
+      {/* <Todo/> */}
+      {/* <Tour/> */}
+      <QuestionAns/>
+
     </div>
   ); 
 }
