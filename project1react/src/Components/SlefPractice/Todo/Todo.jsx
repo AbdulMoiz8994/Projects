@@ -26,7 +26,7 @@ export const Todo = () => {
           // console.log(currEle);
           if (currEle.id === saveId) {
             // console.log({ ...currEle, name: data });
-            return { ...currEle, name: data };
+            return ({ ...currEle, name: data });
           } else {
             return { ...currEle };
           }
