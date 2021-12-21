@@ -6,7 +6,11 @@ import './App.css';
 // slef practice
 // import {Todo} from './Components/SlefPractice/index';
 // import {Tour} from './Components/SlefPractice/PracticeApi/index'
-import {QuestionAns} from './Components/SlefPractice/QuestionAns/index'
+// import {QuestionAns} from './Components/SlefPractice/QuestionAns/index'
+
+// covid 19 Application
+import {Cards} from './Components/SlefPractice/Covid19Application/Component/ShowData/Cards'
+
 function App() {
   return (
     <div>
@@ -16,8 +20,8 @@ function App() {
       {/* <h1>hello</h1> */}
       {/* <Todo/> */}
       {/* <Tour/> */}
-      <QuestionAns/>
-
+      {/* <QuestionAns/> */}
+        <Cards/>
     </div>
   ); 
 }
