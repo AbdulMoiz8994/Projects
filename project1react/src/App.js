@@ -9,7 +9,11 @@ import './App.css';
 // import {QuestionAns} from './Components/SlefPractice/QuestionAns/index'
 
 // covid 19 Application
-import {Cards} from './Components/SlefPractice/Covid19Application/Component/ShowData/Cards'
+// import {Cards} from './Components/SlefPractice/Covid19Application/Component/ShowData/Cards'
+
+// expense Track
+import {Balance, Header, IncomeAndExpense, AddTransaction,History} from './Components/SlefPractice/SelfPractice/index'
+import {UseContext} from './Components/SlefPractice/SelfPractice/Context/UseContext'
 
 function App() {
   return (
@@ -21,7 +25,15 @@ function App() {
       {/* <Todo/> */}
       {/* <Tour/> */}
       {/* <QuestionAns/> */}
-        <Cards/>
+        {/* <Cards/> */}
+        <Header/>
+        
+        <UseContext>
+        <Balance/>
+        <IncomeAndExpense/>
+        <AddTransaction/>
+        <History/>
+        </UseContext>
     </div>
   ); 
 }
