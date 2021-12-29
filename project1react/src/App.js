@@ -12,8 +12,13 @@ import './App.css';
 // import {Cards} from './Components/SlefPractice/Covid19Application/Component/ShowData/Cards'
 
 // expense Track
-import {Balance, Header, IncomeAndExpense, AddTransaction,History} from './Components/SlefPractice/SelfPractice/index'
-import {UseContext} from './Components/SlefPractice/SelfPractice/Context/UseContext'
+// import {Balance, Header, IncomeAndExpense, AddTransaction,History} from './Components/SlefPractice/SelfPractice/index'
+// import {UseContext} from './Components/SlefPractice/SelfPractice/Context/UseContext'
+
+
+// Cart Reducer
+import {Navbar, CartContainer} from './Components/SlefPractice/PracticeReducerCart/index'
+import {UseContext} from './Components/SlefPractice/PracticeReducerCart/Context/UseContext'
 
 function App() {
   return (
@@ -26,14 +31,17 @@ function App() {
       {/* <Tour/> */}
       {/* <QuestionAns/> */}
         {/* <Cards/> */}
-        <Header/>
-        
+        {/* <Header/>
         <UseContext>
         <Balance/>
         <IncomeAndExpense/>
         <AddTransaction/>
         <History/>
-        </UseContext>
+        </UseContext> */}
+      <UseContext>
+        <Navbar/>  
+        <CartContainer/>
+       </UseContext>
     </div>
   ); 
 }

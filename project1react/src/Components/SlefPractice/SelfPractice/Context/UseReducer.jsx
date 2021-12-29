@@ -8,7 +8,6 @@ export const UseReducer = (state,action) =>{
             ...state,
             transaction: [action.payload,...state.transaction]
         };   
-         break;
         case DELETE_TRANSACTION:
           return{
               ...state,
