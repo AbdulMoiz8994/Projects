@@ -116,4 +116,4 @@ dealineformat.forEach((item,index) =>{
  }
 }
 const countDown= setInterval(getRemaningTime,1000);
-getRemaningTime()
+

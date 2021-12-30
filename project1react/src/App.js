@@ -17,8 +17,15 @@ import './App.css';
 
 
 // Cart Reducer
-import {Navbar, CartContainer} from './Components/SlefPractice/PracticeReducerCart/index'
-import {UseContext} from './Components/SlefPractice/PracticeReducerCart/Context/UseContext'
+// import {Navbar, CartContainer} from './Components/SlefPractice/PracticeReducerCart/index'
+// import {UseContext} from './Components/SlefPractice/PracticeReducerCart/Context/UseContext'
+
+
+// Router
+import {Route, Routes} from 'react-router-dom';
+import {Home, About, Error, Navbar, SingleCocktail} from './Components/SlefPractice/TheSearchBoxCocktail/index';
+import {UseContext} from './Components/SlefPractice/TheSearchBoxCocktail/Components/Context/UseContext'
+
 
 function App() {
   return (
@@ -38,10 +45,23 @@ function App() {
         <AddTransaction/>
         <History/>
         </UseContext> */}
-      <UseContext>
+
+{/* Cart Application useReducer */}
+      {/* <UseContext>
         <Navbar/>  
         <CartContainer/>
-       </UseContext>
+       </UseContext> */}
+
+      <Navbar/>
+{/* Routing  */}
+        <UseContext>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="*" element={<Error/>} />
+        <Route path="/cocktail/:id" element={<SingleCocktail/>} />
+      </Routes>
+      </UseContext>
     </div>
   ); 
 }
