@@ -1,10 +1,10 @@
 import React,{useContext} from 'react'
-import {INCREMENT, DECREMENT} from '../Context/type'
+// import {INCREMENT, DECREMENT} from '../Context/type'
 import {CreateContext} from '../Context/CreateContext'
 export const CartItem = ({item}) => {
     // console.log(item);
     const {id,img,title,price, amount}=item;
-  const {Increase, Decrease}=useContext(CreateContext);
+  const {Increase, Decrease,removeItem}=useContext(CreateContext);
 
 
     return (
@@ -15,7 +15,7 @@ export const CartItem = ({item}) => {
           <button onClick={() => Increase(id)}>+</button>   
           <p>{amount}</p>        
           <button onClick={() => Decrease(id)}>-</button> <br />
-          <button>Remove</button>
+          <button onClick={() => removeItem(id)}>Remove</button>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import {UseReducer} from './UseReducer'
 import {Data} from '../Component/data'
 
 // types
-import {INCREMENT, DECREMENT} from './type'
+import {INCREMENT, DECREMENT, REMOVE_CART,REMOVE_ALL} from './type'
 
 
 export const UseContext = ({children}) => {
@@ -37,12 +37,27 @@ const  Decrease=(id) =>{
     })
 }
 
+const removeItem=(id)=>{
+//   console.log(id);
+  dispatch({
+      type: REMOVE_CART,
+      payload: id
+  })
+}
+const removeAll=() =>{
+// console.log(cart);
+dispatch({
+   type: REMOVE_ALL,
+})
+}
     return (
         <div>
             <CreateContext.Provider value={{
                 cart: state.cart,
                  Increase,
                  Decrease,
+                 removeItem,
+                 removeAll,
             }}>
                {children}
             </CreateContext.Provider>
