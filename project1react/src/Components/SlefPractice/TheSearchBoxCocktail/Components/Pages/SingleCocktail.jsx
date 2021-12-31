@@ -39,7 +39,7 @@ console.log(cocktails);
 
     useEffect(() =>{
         fetchSingleCock()
-    },[])
+    },[fetchSingleCock])
     if(loading){
         return <h1>Loading..</h1>
     }

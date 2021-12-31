@@ -23,8 +23,8 @@ export const UseContext = ({children}) => {
 //     This useCallBack hook will resverve the data in their cache
    const fetchData=useCallback(async () =>{
    try{
-    setLoading(true)
-    const data=await fetch(`${url}`);
+    // setLoading(true)
+    const data=await fetch(`${url}${searchItem}`);
     const  {drinks}=await data.json();  
     // console.log(drinks);
   { 
@@ -46,19 +46,11 @@ export const UseContext = ({children}) => {
   setLoading(false);
 
 }
-
-
    }catch(error){
       console.log(error);
       setLoading(false);
    }
-},[]);
-
-
-
-
-
-
+},[searchItem]);
 
 // console.log(cocktail);
 // function cockSingle(id){
@@ -70,14 +62,15 @@ export const UseContext = ({children}) => {
 
 useEffect(() =>{
    fetchData()
-},[fetchData, searchItem])
-
+},[fetchData,searchItem])
+console.log(searchItem);
     return (
         <div>
     <CreateContext.Provider value={{
           loading,
           setSearchItem,
           cocktail,
+          searchItem
     }}>
          {children}
     </CreateContext.Provider>
