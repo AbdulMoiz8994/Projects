@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 export const SingleCocktail = () => {
    
     const {id}=useParams();
-    console.log(id);
+    // console.log(id);
   const [loading, setLoading]=useState(true);
   const [cocktails, setCocktails]=useState({});
 
@@ -33,9 +33,9 @@ export const SingleCocktail = () => {
     }else{
         setCocktails({});
     }        
-   },[])
+   },[id])
 
-console.log(cocktails);
+// console.log(cocktails);
 
     useEffect(() =>{
         fetchSingleCock()

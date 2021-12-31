@@ -5,17 +5,13 @@ import {Link} from 'react-router-dom'
 
 export const Cocktail = () => {
 
-   let {loading,cocktail,searchItem}=useContext(CreateContext);
-    // console.log(cocktail.length);
+   let {loading,cocktail}=useContext(CreateContext);
+    // console.log(cocktail);
 
     if(loading){
         return <h1>Loading...</h1>
-    }
-//   const data=cocktail.map((value) =>{
-//         return value.name
-//   })
-//   console.log(data);
-    if(cocktail.length < 1){
+    }else{
+    if(cocktail === undefined){
         return <h1>There is no Cocktails your search criteria</h1>
     }
     // else{   
@@ -40,4 +36,5 @@ export const Cocktail = () => {
         </div>
     )
 // }
+}
 }

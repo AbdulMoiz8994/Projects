@@ -3,11 +3,16 @@ let btn_play=document.getElementById("btn_play");
 const btn_Restart=document.getElementById("btn_stop");
 const inputRange=document.querySelector("#inputRange");
 const timeStamp=document.getElementById("time");
-console.log(btn_play.innerHTML);
+const halfVolumne=document.getElementById("halfVolumne");
+// const fullVolumne=document.getElementById("fullVolumne");
+const mute=document.getElementById("mute");
+
+// console.log(btn_play.innerHTML);
 
 function toggleVideoFunc(){
   if(video.paused){
-      video.play()
+      video.play();
+
   }else{
       video.pause()
   }    
@@ -54,8 +59,30 @@ function updateInputPRogress(){
     // console.log((inputRange.value * video.duration) / 100);
     video.currentTime= (inputRange.value * video.duration) / 100
 }
+function halfVolumneFunc(){
+   if(video.volume == 1.0){
+    video.volume=0.1;
+   }else{
+       video.volume=1.0
+   }
+}
+// function fullVolumneFunc(){
+//     // alert(video.volume);
+//     video.volume=1.0
+// }
 
-
+function muteFuncIcons(){
+    // if(video.paused){
+        console.log(video.muted);
+        if(video.muted === false ){
+            video.muted=true    
+            mute.innerHTML=`<i class="fas fa-volume-mute"></i>`
+            console.log(video.muted);
+        }else{
+        video.muted=false
+        mute.innerHTML=`<i class="fas fa-volume-up"></i>`            
+        }
+}
 
 video.addEventListener('click', toggleVideoFunc);
 video.addEventListener('pause', updateIcons);
@@ -64,3 +91,7 @@ video.addEventListener('timeupdate', updateProgress)
 btn_play.addEventListener('click', toggleVideoFunc);
 btn_Restart.addEventListener('click', ResetFunc);
 inputRange.addEventListener('change', updateInputPRogress)
+halfVolumne.addEventListener('click', halfVolumneFunc)
+// fullVolumne.addEventListener('click', fullVolumneFunc)
+// mute.addEventListener('play', muteFuncIcons)
+mute.addEventListener('click', muteFuncIcons)

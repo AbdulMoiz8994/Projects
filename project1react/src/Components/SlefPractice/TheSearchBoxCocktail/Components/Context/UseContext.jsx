@@ -10,6 +10,7 @@ export const UseContext = ({children}) => {
     // const [singleCocktail, setSingleCocktail]=useState("");
      
     let url=`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`
+ 
 
     // if(singleCocktail){
         // console.log(" firstdata");
@@ -22,9 +23,11 @@ export const UseContext = ({children}) => {
 
 //     This useCallBack hook will resverve the data in their cache
    const fetchData=useCallback(async () =>{
+       setLoading(true)
    try{
     // setLoading(true)
     const data=await fetch(`${url}${searchItem}`);
+    // console.log(`${url}${searchItem}`);
     const  {drinks}=await data.json();  
     // console.log(drinks);
   { 
@@ -44,13 +47,19 @@ export const UseContext = ({children}) => {
   : setCocktail([]);
   setCocktail(newCon);
   setLoading(false);
-
 }
    }catch(error){
       console.log(error);
       setLoading(false);
    }
-},[searchItem]);
+},[searchItem,url]);
+
+useEffect(() =>{
+   fetchData()
+},[fetchData,searchItem])
+// console.log(searchItem);
+
+
 
 // console.log(cocktail);
 // function cockSingle(id){
@@ -58,19 +67,12 @@ export const UseContext = ({children}) => {
 //   setSingleCocktail(id)
 // }
 
-
-
-useEffect(() =>{
-   fetchData()
-},[fetchData,searchItem])
-console.log(searchItem);
     return (
         <div>
     <CreateContext.Provider value={{
           loading,
           setSearchItem,
           cocktail,
-          searchItem
     }}>
          {children}
     </CreateContext.Provider>
