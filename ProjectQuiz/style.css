@@ -1,0 +1,10 @@
+.card-text{
+    cursor: pointer;
+}
+.active{
+    background-color: rgb(35,125,250);
+    color: white;
+}
+.removebtn{
+    display: none !important;
+}
