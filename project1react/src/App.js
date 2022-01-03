@@ -22,9 +22,13 @@ import './App.css';
 
 
 // Router
-import {Route, Routes} from 'react-router-dom';
-import {Home, About, Error, Navbar, SingleCocktail} from './Components/SlefPractice/TheSearchBoxCocktail/index';
-import {UseContext} from './Components/SlefPractice/TheSearchBoxCocktail/Components/Context/UseContext'
+// import {Route, Routes} from 'react-router-dom';
+// import {Home, About, Error, Navbar, SingleCocktail} from './Components/SlefPractice/TheSearchBoxCocktail/index';
+// import {UseContext} from './Components/SlefPractice/TheSearchBoxCocktail/Components/Context/UseContext'
+
+
+// self Practice Resturant
+import {Resturant} from './Components/SlefPractice/Resturant/Resturant'
 
 
 function App() {
@@ -52,16 +56,20 @@ function App() {
         <CartContainer/>
        </UseContext> */}
 
-      <Navbar/>
-{/* Routing  */}
+  
+    {/*  The Start of cocktail project and where we do use the search function via useState 
+    we add the dynamic at the end of like this ${url}${seacrhItem} /}
+      {/* <Navbar/>
         <UseContext>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
         <Route path="*" element={<Error/>} />
-        <Route path="/cocktail/:id" element={<SingleCocktail/>} />
+        <Route path="/cocktail/:id" element={<SingleCocktail/>} />t
       </Routes>
-      </UseContext>
+      </UseContext> */}
+
+   <Resturant/>
     </div>
   ); 
 }

@@ -1,3 +1,6 @@
 .nav-container{
     width: 3%;
 }
+.container_resturant, .container_resturant img{
+    width: 50% !important;
+}
