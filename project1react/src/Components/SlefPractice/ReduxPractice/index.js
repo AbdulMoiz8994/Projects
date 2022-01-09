@@ -1,0 +1,5 @@
+export {Header} from './Components/Header'
+export {Balance} from './Components/Balance'
+export {IcomeandExpense} from './Components/IcomeandExpense'
+export {History} from './Components/History'
+export {AddTransaction} from './Components/AddTransaction'

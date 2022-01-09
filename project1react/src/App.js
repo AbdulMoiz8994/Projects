@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux';
 import './App.css';
 // import Resturant from './Components/Resturant/Resturant'
 // import {Todo} from './Components/TODOAPP/todo'
@@ -28,9 +29,12 @@ import './App.css';
 
 
 // self Practice Resturant
-import {Resturant} from './Components/SlefPractice/Resturant/Resturant'
+// import {Resturant} from './Components/SlefPractice/Resturant/Resturant'
 
 
+// Redux
+import {AddTransaction,Balance,Header,History,IcomeandExpense} from './Components/SlefPractice/ReduxPractice/index'
+import {CreatStore} from './Components/SlefPractice/ReduxPractice/Store/store'
 function App() {
   return (
     <div>
@@ -69,7 +73,21 @@ function App() {
       </Routes>
       </UseContext> */}
 
-   <Resturant/>
+   {/* <Resturant/> */}
+
+
+
+   {/* Redux */}
+   <Provider store={CreatStore}>
+     <Header/>
+     <Balance/>
+     <IcomeandExpense/>
+     <History/>
+     <AddTransaction/>
+     </Provider>
+    
+
+
     </div>
   ); 
 }
