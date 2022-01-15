@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page side/model</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/661da8f7e5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar content -->
+   <nav data-navbar>
+       <div class="logo">
+             <img src="https://randomuser.me/api/portraits/thumb/men/77.jpg" alt="">
+       </div>
+       <ul class="ul_List">
+           <li><a href="#">Home</a> </li>
+           <li><a href="#">Portfolio</a> </li>
+           <li><a href="#">Blog</a></li>
+           <li><a href="#">Contact</a></li>
+       </ul>
+   </nav>
+   <!-- Header Section -->
+   <header class="header">
+       <button class="toggle" id="toggle">
+        <i class="fas fa-bars fa-2x"></i>
+       </button>
+       <h1>My Landing Page</h1>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis minima eum laborum iure ipsa eveniet, expedita similique aut, non soluta itaque accusamus sunt reprehenderit rerum explicabo eaque! Recusandae, voluptatibus minima.</p>
+       <button class="cta_btn" id="form_btn">Sign Up</button>
+   </header>
+
+   <!-- content -->
+   <div class="content">
+   <section class="section_1">
+     <h1>What is an Axiom?</h1>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea soluta quae aspernatur alias aliquam, ipsam deleniti quod, dolore, odio esse laboriosam quisquam adipisci incidunt corrupti voluptatem nisi nostrum eveniet qui!</p>
+   </section>
+   <section class="section_2">
+      <h1>Learn More</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vitae quo nostrum, ratione, delectus doloremque dolore dolores expedita velit facilis, aperiam voluptate deleniti animi similique molestiae! Consectetur laboriosam molestias minima!</p>
+   </section>
+   <section class="section_3">
+       <h1>Projects</h1>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nostrum, officia enim provident magni nobis rem incidunt cum natus repellat? Vero unde iusto ad reprehenderit, suscipit in libero debitis asperiores!</p>
+   </section>
+<!-- model -->
+    <div class="model" id="model">
+        <div class="header_form">
+            <button id="cut_btn">
+                <i class="fas fa-times fa-2x"></i>
+            </button>
+            <div class="heading">
+                Sign Up
+            </div>
+            <div class="modal_content">
+                <p>Register for Classes</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password">
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Enter Confirm Password">
+                    </div>
+                    <input type="submit" value="Submit" class="submit_btn">
+                </form>
+            </div>
+        </div>
+
+    </div>
+   </div>
+    <script src="./script.js"></script>
+</body>
+</html>
